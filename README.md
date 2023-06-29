@@ -136,7 +136,7 @@ The Ingestion (Apache Nifi) is designed to automate data across systems. In real
       - session set nifi.props /opt/nifi-toolkit/nifi-envs/nifi-DEV 
       - export nifi_prd_port='8443'
           
-    3) Move Files to S3 bucket
+   
 </details>
 
   <details>
