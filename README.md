@@ -7,7 +7,7 @@ My job was to design and implement a data warehouse from these files. The requir
 
 My intention with this project is to replicate some of the more important aspects of the above scenario. Please note that the healthcare dataset is fake and is being used only for demonstration purposes.
 
-## <font color="green"><left>PHASE ONE: Data Integration and Data Consolidation with Standardization</left></font>
+#### <font color="green"><left>PHASE ONE: Data Integration and Data Consolidation with Standardization</left></font>
 
 <details>
   <summary><strong>Extraction Approach: Apache Nifi</strong></summary>
@@ -42,7 +42,7 @@ The Ingestion (Apache Nifi) is designed to automate data across systems. In real
 <details>
 <summary>
     
-#### 1) Goto [http:/localhost:8443/nifi/](http:/localhost:8443/nifi/): Setup Nifi Environment
+##### 1) Goto [http:/localhost:8443/nifi/](http:/localhost:8443/nifi/): Setup Nifi Environment
 </summary>
 
 - Setup Nifi Environment: I am using a MAC
@@ -97,7 +97,7 @@ The Ingestion (Apache Nifi) is designed to automate data across systems. In real
 <details>
 <summary>
   
-#### 2) Goto [http:/localhost:8443/nifi/](http:/localhost:8443/nifi/): Automate Log parsing
+##### 2) Goto [http:/localhost:8443/nifi/](http:/localhost:8443/nifi/): Automate Log parsing
 </summary>
 
 - Setup Nifi Environment: I am using a MAC
@@ -142,31 +142,20 @@ The Ingestion (Apache Nifi) is designed to automate data across systems. In real
   <details>
 <summary>
   
- #### 2) Goto [http:/localhost:8443/nifi/](http:/localhost:8443/nifi/): Files to Postgres Database
+ ##### 3) Goto [http:/localhost:8443/nifi/](http:/localhost:8443/nifi/): Files to Postgres Database
 </summary>
     
 - Nifi Configuration
 - Ingest Files to Postgres Database
 - Move Files to S3 bucket
 </details>
-  <details>
-<summary>
-  
- #### 3) Move Files to S3 bucket
-</summary>
-    
-- Nifi Configuration
-- Ingest Files to Postgres Database
-- Move Files to S3 bucket
-</details>
+ 
 </details>
 
 
 <details>
-<summary>
     
-### Load Approach: Snowflake and SQL
-</summary>
+<summary><strong> Load Approach: Snowflake and SQL</strong></summary>
 
 <p>
 The next step is to populate the cloud database. Snowpipe will pull the normalized JSON files from AWS into tables. As previously stated, the agreement with the EMR company was to FTP the files twice a day. I would be required to configure the load by creating a Task (Acron) and a Stream (CDC). This would enable triggers for a scheduled load and would continuously update the appropriate tables.
@@ -187,12 +176,10 @@ The next step is to populate the cloud database. Snowpipe will pull the normaliz
 
 </details>
 
-## <font color="green"><left>PHASE TWO: Reporting and Analytics</left></font>
+#### <font color="green"><left>PHASE TWO: Reporting and Analytics</left></font>
 <details>
-<summary>
     
-### Transformation, Documentation: DBT and SQL
-</summary>
+<summary><strong> Transformation, Documentation: DBT and SQL</strong></summary>
 
 <p>
 Another requirement was implementing a Data Warehouse that enabled the stakeholders to view and compare the reports and KPIs. Since Data Warehouse usage is mainly for analytical purposes rather than transactional, I decided to design a Star Schema because the structure is less complex and provides better query performance. Documenting wasn’t required, however, adding the Data Build Tool (DBT) to this process allowed us to document each dimension, columns, and visualize the Star Schema. DBT also allowed us to neatly organize all data transformations into discrete models.
@@ -210,10 +197,8 @@ Another requirement was implementing a Data Warehouse that enabled the stakehold
 </details>
 
 <details>
-<summary>
     
-### Analyze Approach: Language of choice Python and Tableau
-</summary>
+<summary><strong> Analyze Approach: Language of choice Python and Tableau</strong></summary>
 
 <p>
 My intention with this project is to replicate some of the more important aspects of the above scenario. <font color="red">Please note that the healthcare dataset is fake and is being used only for demonstration purposes.</font>
@@ -230,5 +215,5 @@ My intention with this project is to replicate some of the more important aspect
 
 </details>
 
-## <font color="green"><left>PHASE THREE</left></font>
+#### <font color="green"><left>PHASE THREE</left></font>
 * Models
