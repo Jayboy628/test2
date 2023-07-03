@@ -11,6 +11,43 @@ I worked for a health company that encountered a major issue with their EMR syst
 
 My role was to design and implement a data warehouse using these files. The requirements included creating various production reports and KPIs that matched the EMR system. The business owners would compare eClinicalWorks integrated reports with my reports, and if they aligned, they would be flagged for production use. This was critical for data migration as it ensured that all operational reports were accurate and validated that eClinicalWorks was configured based on the company's business requirements.
 
+#### Agendat
+- Cloud-Based Solutions: Healthcare Data Warehouse
+  - [Installing Nifi Toolkit & Nifi](https://nifi.apache.org/docs/nifi-docs/html/getting-started.html): Setup Nifi Environment
+  - Automate Log parsing:
+    - INFO
+    - DEBUG
+    - WARN
+    - ERROR
+  - FTP Environment:The EMR company push the health data to an Environmet 
+      - JSON FILE: File(FTP Location) configuration
+      - Upload Files
+  - Staging Database (PostgreSQL):Ingest files into Database,temporary storage location for Data cleansing, validation and transformation processes
+    - parameter-context
+      - JSON FILE: Database configuration
+    - postgresql
+      - Create Tables
+      - load Data 
+    - Cloud Storage (S3): Stored processed and transformation files
+        - Parameter-Context
+          - JSON FILE: File configuration
+        - AWS(S3)
+        - Identity and Access Management (IAM)
+        - Access Keys
+        - Bucket
+        - Folder
+        - Load JSON Files
+  - Snowflake: Data Warehouse and SQS Setup
+    - Database 
+      - Table
+        - Type-1
+        - Type-2
+      - View
+        - DBT (explained in the next section)
+      - Stored procedure
+      - Snowpipe
+      - Stream
+      - Task
 ### <font color="green">PHASE ONE: Data Ingestion, Data Storage, Data Warehouse Layers</font>
 ---------------------------------------------------------------------------------------------------------------------
 
