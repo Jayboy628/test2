@@ -14,8 +14,11 @@ My role was to design and implement a data warehouse using these files. The requ
 ### Agenda
 
 - Cloud-Based Solutions: Healthcare Data Warehouse
-  - [Installing Nifi Toolkit & Nifi](https://nifi.apache.org/docs/nifi-docs/html/getting-started.html): Setup Nifi Environment
-  - Automate Log parsing:
+  - Ingestion Approach
+    - [Installing Nifi Toolkit & Nifi](https://nifi.apache.org/docs/nifi-docs/html/getting-started.html): Setup Nifi Environment
+    - Automate Log parsing:
+    - Nifi Ingest Data to PostgreSQL Database
+    - Nifi Automate PostgreSQL Database to Store JSON File in AWS (S3)
   - FTP Environment:The EMR company push the health data to an Environmet 
   - Staging Database (PostgreSQL)
   - Cloud Storage (S3)
