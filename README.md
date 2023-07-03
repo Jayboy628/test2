@@ -16,39 +16,11 @@ My role was to design and implement a data warehouse using these files. The requ
 - Cloud-Based Solutions: Healthcare Data Warehouse
   - [Installing Nifi Toolkit & Nifi](https://nifi.apache.org/docs/nifi-docs/html/getting-started.html): Setup Nifi Environment
   - Automate Log parsing:
-    - INFO
-    - DEBUG
-    - WARN
-    - ERROR
   - FTP Environment:The EMR company push the health data to an Environmet 
-      - JSON FILE: File(FTP Location) configuration
-      - Upload Files
   - Staging Database (PostgreSQL):Ingest files into Database,temporary storage location for Data cleansing, validation and transformation processes
-    - parameter-context
-      - JSON FILE: Database configuration
-    - postgresql
-      - Create Tables
-      - load Data 
-  - Cloud Storage (S3): Stored processed and transformation files
-    - Parameter-Context
-      - JSON FILE: File configuration
-    - AWS(S3)
-      - Identity and Access Management (IAM)
-      - Access Keys
-      - Bucket
-      - Folder
-      - Load JSON Files
+  - Cloud Storage (S3): Stored processed and transformation file
   - Snowflake: Data Warehouse and SQS Setup
-   - Database 
-      - Table
-        - Type-1
-        - Type-2
-      - View
-        - DBT (explained in the next section)
-      - Stored procedure
-      - Snowpipe
-      - Stream
-      - Task
+  - DBT (explained in the next section)
 ### <font color="green">PHASE ONE: Data Ingestion, Data Storage, Data Warehouse Layers</font>
 ---------------------------------------------------------------------------------------------------------------------
 
