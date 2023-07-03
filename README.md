@@ -10,6 +10,7 @@
 I worked for a health company that encountered a major issue with their EMR system because it did not align with their business process. This led to numerous bugs due to excessive custom builds. As a solution, the company decided to transition to eClinicalWorks, a cloud-based EMR system. However, since the EMR company owned the database, we had to amend the contract to extend our usage agreement. Additionally, the EMR company agreed to FTP the live data files to us before work begins at 2:00 am and after work ends at 7:00 pm.
 
 My role was to design and implement a data warehouse using these files. The requirements included creating various production reports and KPIs that matched the EMR system. The business owners would compare eClinicalWorks integrated reports with my reports, and if they aligned, they would be flagged for production use. This was critical for data migration as it ensured that all operational reports were accurate and validated that eClinicalWorks was configured based on the company's business requirements.
+
 ---------------------------------------------------------------------------------------------------------------------
 ### Agenda
 
@@ -17,13 +18,15 @@ My role was to design and implement a data warehouse using these files. The requ
   - Ingestion Approach
     - [Installing Nifi Toolkit & Nifi](https://nifi.apache.org/docs/nifi-docs/html/getting-started.html): Setup Nifi Environment
     - Automate Log parsing:
-    - Nifi Ingest Data to PostgreSQL Database
+    - Nifi Ingest Data to Staging Database (PostgreSQL)
     - Nifi Automate PostgreSQL Database to Store JSON File in AWS (S3)
-  - FTP Environment:The EMR company push the health data to an Environmet 
-  - Staging Database (PostgreSQL)
-  - Cloud Storage (S3)
-  - Data Warehouse 
-  - DBT 
+  - Load Approach
+    - Create Stage Environment
+    - Staging Database (PostgreSQL)
+    - Cloud Storage (S3)
+    - Data Warehouse 
+  - Reporting Approach
+    - CMS 
 ### <font color="green">PHASE ONE: Data Ingestion, Data Storage, Data Warehouse Layers</font>
 ---------------------------------------------------------------------------------------------------------------------
 
